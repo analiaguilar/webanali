@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Boleta de Notas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="encabezado">
+    <div class="contenido-encabezado">
+
+      <img src="img/logo.png" alt="Logo Sigmund Freud" class="logo">
+
+        <div class="texto-encabezado">
+          <h1>I.E.S.T.P. SIGMUND FREUD</h1>
+          <p>Sistema Web de Registro de Notas</p>
+      </div>
+
+    </div>
+</header>
+
+<div class="container">
+
+    <h1>Sistema de Boleta de Notas</h1>
+
+    <p class="descripcion">
+        Registro de estudiantes por especialidad y generación de boleta académica.
+    </p>
+
+    <div class="formulario">
+
+        <input type="text" id="nombre" placeholder="Nombre del estudiante">
+
+        <select id="especialidad">
+            <option value="">Seleccione especialidad</option>
+            <option>Computación e Informática</option>
+            <option>Tradución de Idiomas</option>
+            <option>Secretariado Ejectivo</option>
+            <option>Enfermería Técnica</option>
+        </select>
+
+        <input type="number" id="nota1" placeholder="Nota 1" min="0" max="20">
+        <input type="number" id="nota2" placeholder="Nota 2" min="0" max="20">
+        <input type="number" id="nota3" placeholder="Nota 3" min="0" max="20">
+
+        <button onclick="registrarEstudiante()">Registrar Estudiante</button>
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Especialidad</th>
+                <th>Promedio</th>
+                <th>Estado</th>
+                <th>Boleta</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaEstudiantes"></tbody>
+    </table>
+
+    <div id="boleta" class="boleta"></div>
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 I.E.S.T.P. SIGMUND FREUD | Sistema de Boleta de Notas</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
